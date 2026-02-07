@@ -188,7 +188,6 @@ in
 
         images = [
           {
-            # extension must match `imageFormat`
             location = "${imageWithFinalConfig}/${imageWithFinalConfig.passthru.filePath}";
           }
         ];
