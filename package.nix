@@ -81,11 +81,9 @@ let
         services = {
           getty = optionalAttrs debugInsecurely { autologinUser = linuxUser; };
 
-          logind = optionalAttrs onDemand {
-            extraConfig = ''
-              IdleAction=poweroff
-              IdleActionSec=${toString onDemandLingerMinutes}minutes
-            '';
+          logind.settings.Login = optionalAttrs onDemand {
+            IdleAction = "poweroff";
+            IdleActionSec = "${toString onDemandLingerMinutes}minutes";
           };
 
           openssh = {
@@ -201,7 +199,8 @@ let
           mountTag = "vz-rosetta";
         };
       }
-    ] ++ [ potentiallyInsecureExtraNixosModule ];
+    ]
+    ++ [ potentiallyInsecureExtraNixosModule ];
   };
 in
 imageConfig.config.system.build.images.qemu-efi
