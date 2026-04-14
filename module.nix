@@ -302,7 +302,7 @@ in
                 hash = "sha256-U054xA3utBcSfpyvsZi4MvgJGNa7QyAYJf9usNXpgXg=";
               };
 
-              vendorHash = "";
+              vendorHash = "sha256-C4YCuFVXkL5vS6lWZCGkEeZQgAkP55buPDGZ/wvMnAA=";
 
               meta = old.meta // {
                 knownVulnerabilities = [ ];
