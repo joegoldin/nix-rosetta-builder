@@ -303,6 +303,10 @@ in
               };
 
               vendorHash = "";
+
+              meta = old.meta // {
+                knownVulnerabilities = [ ];
+              };
             }))
             pkgs.openssh
 
