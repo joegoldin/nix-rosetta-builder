@@ -294,14 +294,15 @@ in
             pkgs.findutils
             pkgs.gnugrep
             (pkgs.lima.overrideAttrs (old: {
+              version = "2.1.1";
               src = pkgs.fetchFromGitHub {
-                owner = "cpick";
+                owner = "lima-vm";
                 repo = "lima";
-                rev = "afbfdfb8dd5fa370547b7fc64a16ce2a354b1ff0";
-                hash = "sha256-tCildZJp6ls+WxRAbkoeLRb4WdroBYn/gvE5Vb8Hm5A=";
+                rev = "v2.1.1";
+                hash = "sha256-U054xA3utBcSfpyvsZi4MvgJGNa7QyAYJf9usNXpgXg=";
               };
 
-              vendorHash = "sha256-I84971WovhJL/VO/Ycu12qa9lDL3F9USxlt9rXcsnTU=";
+              vendorHash = "";
             }))
             pkgs.openssh
 
